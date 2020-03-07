@@ -1,0 +1,380 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.regEnter{
+				width: 100vw;
+				height: 100vh;
+				background: #da2d1f;
+			}
+			.regEnter img{
+				width: 4.5rem;
+				height:4.5rem;
+				margin: 8.72rem 50% 0;
+				transform: translateX(-50%);
+			}
+			.regEnter button{
+				margin: 14rem 50% 0;
+				transform: translateX(-50%);
+				width: 15.2rem;
+				height:2.56rem;
+				background: #fff;
+				color: #da2d1f;
+				font-size: 0.84rem;
+				text-align: center;
+				border-radius: 1.2rem;
+				border: none;
+				white-space: 0.1rems;
+				letter-spacing: 0.05rem;
+			}
+			.regEnter .box1{
+				list-style: none;
+				width: 15.2rem;
+				height: 2rem;
+				margin: 1.4rem auto 0;
+				display: flex;
+				justify-content: space-between;
+			}
+			.regEnter .box1 li{
+				height: 2.12rem;
+				width: 2.12rem;
+			}
+			.regEnter .box1 li:nth-of-type(1) a{
+				display: inline-block;
+				height: 2.12rem;
+				width: 2.12rem;
+				background: url(image/weixin.png);
+				background-size: 100%;
+			}
+			.regEnter .box1 li:nth-of-type(2) a{
+				display: inline-block;
+				height: 2.12rem;
+				width: 2.12rem;
+				background: url(image/qq.png);
+				background-size: 100%;
+			}
+			.regEnter .box1 li:nth-of-type(3) a{
+				display: inline-block;
+				height: 2.12rem;
+				width: 2.12rem;
+				background: url(image/weibo.png);
+				background-size: 100%;
+			}
+			.regEnter .box1 li:nth-of-type(4) a{
+				display: inline-block;
+				height: 2.12rem;
+				width: 2.12rem;
+				background: url(image/wangyi.png);
+				background-size: 100%;
+			}
+			.regEnter .text{
+				list-style: none;
+				width: 15.2rem;
+				height:1.12rem;
+				margin: 0.5rem auto 0;
+				color: #fff;
+				font-size: 0.22rem;
+				position: relative;
+			}
+			.regEnter .text label{
+				transform: scale(0.9);
+				float: left;
+				color: #ef7f76;
+			}
+			.regEnter .text .remmber {
+				display: none;
+			}
+			.regEnter .text .remmber+span {
+				display: inline-block;
+				border-radius: 0.08rem;
+				width: 0.6rem;
+				height: 0.6rem;
+				border: 0.04rem solid #ef7f76;
+				vertical-align: middle;
+			}
+			.regEnter .text p{
+				height:1.12rem;
+				position: absolute;
+				right:-1rem;
+				box-sizing: border-box;
+				transform: scale(0.9);
+			}
+			.regEnter .text p a{
+				float: left;
+				color: #f8bfbb;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 点击登录 -->
+		<section class="regEnter" style="display: none;">
+			<img src="image/logo1.png" >
+			<button type="button">邮箱登录</button>
+			<ul class="box1">
+				<li>
+					<a href=""></a>
+				</li>
+				<li>
+					<a href=""></a>
+				</li>
+				<li>
+					<a href=""></a>
+				</li>
+				<li>
+					<a href=""></a>
+				</li>
+			</ul>
+			<section class="text">
+				<label for="remmber">
+					<input class="remmber" type="checkbox" name="remmber" id="remmber">
+					<span></span>
+					同意
+				</label>
+				<p>
+					<a>《用户协议》</a><a>《隐私协议》</a><a>《儿童隐私协议》</a>
+				</p>
+			</section>
+		</section>
+		<!-- 登录页 -->
+		<section class="reg" style="display: none;">
+			<h3><span></span><text>邮箱登录</text></h3>
+			<p>未注册邮箱登录后将自动创建账号</p>
+			<section class="text">
+				<span></span>
+				<input type="text" placeholder="请输入邮箱">
+			</section>
+			<section class="text">
+				<span></span>
+				<input type="text" placeholder="请输入验证码">
+			</section>
+			<button type="button">登录</button>
+		</section>
+		<!-- 内容 -->
+		<section class="mainBody">
+			<!-- 导航 -->
+			<section class="nav">
+				<nav>
+					<span class="left"></span>
+					<span class="right"></span>
+					<section class="center">
+						<ul>
+							<li class="action">我的</li>
+							<li>发现</li>
+							<li>云村</li>
+							<li>视频</li>
+						</ul>
+					</section>
+				</nav>
+			</section>
+			<!-- 播放 -->
+			<section class="play">
+				<img src="image/漫画.jpg" alt="">
+				<h5>
+					<p>我喜欢的音乐</p>
+					<p>横划可以切换上下首哦</p>
+				</h5>
+				<i></i>
+			</section>
+			<!-- 我的 -->
+			<section class="myPage" style="display: none;">
+				<section class="module">
+					<section class="content">
+						<ul>
+							<li>
+								<a href="">
+									<span></span>
+									<p>私人FM</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span></span>
+									<p>私人FM</p>
+								</a>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section class="list">
+					<section>
+						<span></span>
+						<p>本地音乐&nbsp;<em>(9)</em></p>
+					</section>
+					<section>
+						<span></span>
+						<p>最近播放&nbsp;<em>(12)</em></p>
+					</section>
+					<section>
+						<span></span>
+						<p>下载管理&nbsp;<em>(44)</em></p>
+					</section>
+					<section>
+						<span></span>
+						<p>我的电台&nbsp;&nbsp;<em>(666)</em></p>
+					</section>
+					<section>
+						<span></span>
+						<p>我的收藏&nbsp;<em>(专辑/歌手/视频/专栏)</em></p>
+					</section>
+				</section>
+				<section class="songSheet">
+					<section>
+						<p>创建的歌单</p>
+						<span></span>
+						<em></em>
+						<i></i>
+						<ul>
+							<li>
+								<img src="image/漫画.jpg" alt="">
+								<h5>
+									<p>我喜欢的音乐</p>
+									<p>64首</p>
+								</h5>
+								<i></i>
+							</li>
+							<li>
+								<img src="image/漫画.jpg" alt="">
+								<h5>
+									<p>我喜欢的音乐</p>
+									<p>64首</p>
+								</h5>
+								<i></i>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p>收藏的歌单</p>
+						<span></span>
+						<em></em>
+						<i></i>
+					</section>
+				</section>
+			</section>
+			<!-- 发现 -->
+			<section class="find">
+				<section class="advert">
+					<section class="swiper-container">
+					    <section class="swiper-wrapper">
+					        <section class="swiper-slide">
+								<img src="image/find/advert1.jpg" alt="">
+							</section>
+					        <section class="swiper-slide">
+								<img src="image/find/advert2.jpg" alt="">
+							</section>
+					        <section class="swiper-slide">
+								<img src="image/find/advert3.jpg" alt="">
+							</section>
+					    </section>
+					    <!-- 如果需要分页器 -->
+					    <section class="swiper-pagination"></section>
+					</section>
+				</section>
+				<section class="module">
+					<section class="content">
+						<ul>
+							<li>
+								<a href="">
+									<span></span>
+									<p>私人FM</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span></span>
+									<p>私人FM</p>
+								</a>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section class="recommend">
+					<section class="title">
+						<h3>推荐歌单</h3>
+						<button type="button">歌单广场</button>
+					</section>
+					<section>
+						<section class="row">
+							<section class="list">
+								<img src="image/find/109951164667519262.jpg" alt="">
+								<p>皎皎云间月 灼灼月中华</p>
+								<span><span class="iconfont icon-bofangsanjiaoxing"></span>120万</span>
+							</section>
+							<section class="list">
+								<img src="image/find/109951164667519262.jpg" alt="">
+								<p>皎皎云间月 灼灼月中华</p>
+							</section>
+							<section class="list">
+								<img src="image/find/109951164667519262.jpg" alt="">
+								<p>皎皎云间月 灼灼月中华</p>
+							</section>
+						</section>
+						
+					</section>
+				</section>
+				<section class="chose">
+					<section class="title">
+						<h3>精选内容</h3>
+						<button type="button">获取新内容</button>
+					</section>
+					<section class="content">
+						<h5>来听一首《horizon》</h5>
+						<img src="image/漫画.jpg" alt="" class="con">
+						<section class="introduce">
+							<p>美国队长成长历程，碰上《horizon》</p>
+							<img src="image/find/109951164667519262.jpg" alt="">
+						</section>
+						<section class="comment">
+						    <span><i></i>135656</span>
+							<span><i></i>1334</span>
+							<em></em>
+					    </section>
+					</section>
+				</section>
+			</section>
+		</section>
+			
+		<script type="text/javascript">
+			
+			window.onresize = function(){
+				em();
+			}
+			em();
+			//rem适配函数
+			function em(){
+				var wh = window.innerWidth;
+				var em = wh/20;
+				var html = document.documentElement;
+				html.style.fontSize = em + 'px';
+				console.log(wh);
+			}
+			
+			
+			var mySwiper = new Swiper ('.swiper-container', {
+			    loop: true, // 循环模式选项
+				autoplay: {//自动轮播
+					delay: 4000,
+					stopOnLastSlide: false,
+					disableOnInteraction: true,
+				},
+			    
+			    // // 如果需要分页器
+			    // pagination: {
+			    //   el: '.swiper-pagination',
+			    // },
+			})        
+		</script>
+	</body>
+</html>
